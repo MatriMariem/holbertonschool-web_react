@@ -17,15 +17,21 @@ const st2: Student = {
   location: 'New York',
 }
 const studentList: Array<Student> = [st1, st2];
-
-const table = document.createElement('table');
+const table: HTMLTableElement = document.createElement('table');
 document.body.appendChild(table);
-
+const thead = document.createElement('thead');
+thead.innerHTML = '<tr><th>firstName</th><th>location</th></tr>';
+table.appendChild(thead);
+const tbody = document.createElement('tbody');
+table.appendChild(tbody);
 for (let i: number = 0; i < studentList.length; i++) {
     const row = document.createElement('tr');
-    const fn = document.createTextNode(studentList[i].firstName);
-    const loc = document.createTextNode(studentList[i].location);
-    row.appendChild(fn);
-    row.appendChild(loc);
-    table.appendChild(row);
+    const th1 = document.createElement('th');
+    const th2 = document.createElement('th');
+    th1.innerHTML = studentList[i].firstName;
+    th2.innerHTML = studentList[i].location;
+    row.appendChild(th1);
+    row.appendChild(th2);
+
+    tbody.appendChild(row);
 }
