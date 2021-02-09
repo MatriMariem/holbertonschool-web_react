@@ -36,6 +36,6 @@ export const createEmployee = function(salary: number | string): Director | Teac
   if (typeof salary === "number" && salary < 500) {
     return new Teacher();
   } else {
-    return Director();
+    return new Director();
   }
 }
