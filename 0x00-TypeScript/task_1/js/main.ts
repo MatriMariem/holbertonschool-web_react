@@ -39,7 +39,11 @@ const director1: Directors = {
 console.log(director1);
 
 
-function printTeacher(firstName: string, lastName: string): string {
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string,
+}
+
+function printTeacher: printTeacherFunction(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
 
