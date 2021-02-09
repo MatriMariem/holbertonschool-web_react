@@ -50,10 +50,12 @@ interface stcons {
   new (firstName: string, lastName: string): stclass;
 }
 interface stclass {
+  firstName: string;
+  lastName: string;
   workOnHomework(): string;
   displayName(): string;
 }
-class StudentClass implements stclass {
+export class StudentClass implements stclass {
   firstName: string;
   lastName: string;
 
