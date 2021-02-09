@@ -50,8 +50,6 @@ interface stcons {
   new (firstName: string, lastName: string): stclass;
 }
 interface stclass {
-  firstName: string;
-  lastName: string;
   workOnHomework(): string;
   displayName(): string;
 }
