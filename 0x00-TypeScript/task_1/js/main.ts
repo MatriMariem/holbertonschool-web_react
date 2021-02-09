@@ -43,10 +43,6 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string,
 }
 
-function printTeacher: printTeacherFunction(firstName: string, lastName: string): string {
+let printTeacher: printTeacherFunction = function(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
-}
-
-interface printTeacherFunction {
-  printTeacher(firstName: string, lastName: string): string,
 }

@@ -14,6 +14,6 @@ var director1 = {
     numberOfReports: 17
 };
 console.log(director1);
-function printTeacher(firstName, lastName) {
+var printTeacher = function (firstName, lastName) {
     return firstName[0] + ". " + lastName;
-}
+};
