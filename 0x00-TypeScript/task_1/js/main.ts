@@ -46,8 +46,16 @@ interface printTeacherFunction {
 export const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstName[0]}. ${lastName}`;
 }
-
-class StudentClass {
+interface stcons {
+  new (firstName: string, lastName: string): stclass;
+}
+interface stclass {
+  firstName: string;
+  lastName: string;
+  workOnHomework(): string;
+  displayName(): string;
+}
+class StudentClass implements stclass {
   firstName: string;
   lastName: string;
 
@@ -58,7 +66,7 @@ class StudentClass {
   workOnHomework(): string {
     return "Currently working"
   }
-  displayName() : string {
+  displayName(): string {
     return this.firstName;
   }
 }
