@@ -19,15 +19,15 @@ const st2: Student = {
 const studentList: Array<Student> = [st1, st2];
 const table: HTMLTableElement = document.createElement('table');
 document.body.appendChild(table);
-const thead = document.createElement('thead');
+const thead: HTMLTableSectionElement = document.createElement('thead');
 thead.innerHTML = '<tr><th>firstName</th><th>location</th></tr>';
 table.appendChild(thead);
-const tbody = document.createElement('tbody');
+const tbody: HTMLTableSectionElement = document.createElement('tbody');
 table.appendChild(tbody);
 for (let i: number = 0; i < studentList.length; i++) {
-    const row = document.createElement('tr');
-    const th1 = document.createElement('th');
-    const th2 = document.createElement('th');
+    const row: HTMLTableRowElement = document.createElement('tr');
+    const th1: HTMLTableCellElement = document.createElement('th');
+    const th2: HTMLTableCellElement = document.createElement('th');
     th1.innerHTML = studentList[i].firstName;
     th2.innerHTML = studentList[i].location;
     row.appendChild(th1);
