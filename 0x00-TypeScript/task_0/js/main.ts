@@ -5,15 +5,27 @@ interface Student {
   location: string,
 }
 const st1: Student = {
-  firstName: 'st1',
-  lastName: 'st1',
-  age: 1,
-  location: 'somewhere1',
+  firstName: 'Mariem',
+  lastName: 'Matri',
+  age: 25,
+  location: 'Tunisia',
 }
 const st2: Student = {
-  firstName: 'st2',
-  lastName: 'st2',
-  age: 2,
-  location: 'somewhere2',
+  firstName: 'Peter',
+  lastName: 'Parker',
+  age: 26,
+  location: 'New York',
 }
-const studentList: [Student, Student] = [st1, st2];
+const studentList: Array<Student> = [st1, st2];
+
+const table = document.createElement('table');
+document.body.appendChild(table);
+
+for (let i: number = 0; i < studentList.length; i++) {
+    const row = document.createElement('tr');
+    const fn = document.createTextNode(studentList[i].firstName);
+    const loc = document.createTextNode(studentList[i].location);
+    row.appendChild(fn);
+    row.appendChild(loc);
+    table.appendChild(row);
+}
