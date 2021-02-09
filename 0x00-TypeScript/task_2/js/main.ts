@@ -9,7 +9,7 @@ interface TeacherInterface {
   workTeacherTasks(): string,
 }
 
-class Director implements DirectorInterface {
+export class Director implements DirectorInterface {
   workFromHome(): string {
     return "Working from home";
   }
@@ -20,7 +20,7 @@ class Director implements DirectorInterface {
     return "Getting to director tasks"
   }
 }
-class Teacher implements TeacherInterface {
+export class Teacher implements TeacherInterface {
   workFromHome(): string {
     return "Cannot work from home";
   }
@@ -32,7 +32,7 @@ class Teacher implements TeacherInterface {
   }
 }
 
-const createEmployee = function(salary: number | string): Director | Teacher {
+export const createEmployee = function(salary: number | string): Director | Teacher {
   if (typeof salary === "number" && salary < 500) {
     return new Teacher();
   } else {
