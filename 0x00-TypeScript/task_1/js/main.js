@@ -32,3 +32,4 @@ var StudentClass = /** @class */ (function () {
     };
     return StudentClass;
 }());
+exports.StudentClass = StudentClass;
