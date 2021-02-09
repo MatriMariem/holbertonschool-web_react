@@ -43,6 +43,6 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string,
 }
 
-let printTeacher: printTeacherFunction = (firstName, lastName) => {
+export const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstName[0]}. ${lastName}`;
 }
