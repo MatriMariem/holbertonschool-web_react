@@ -6,10 +6,11 @@ var teacher3 = {
     contract: false
 };
 console.log(teacher3);
-// should print
-// Object
-// contract: false
-// firstName: "John"
-// fullTimeEmployee: false
-// lastName: "Doe"
-// location: "London"
+var director1 = {
+    firstName: 'John',
+    lastName: 'Doe',
+    location: 'London',
+    fullTimeEmployee: true,
+    numberOfReports: 17
+};
+console.log(director1);
