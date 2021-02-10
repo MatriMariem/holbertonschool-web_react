@@ -55,11 +55,11 @@ interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
-export class StudentClass implements StudentClassInterface {
+export class StudentClass implements stclass {
   firstName: string;
   lastName: string;
 
-  constructor: StudentConstructor(firstName: string, lastName: string) {
+  constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
     this.lastName = lastName;
   }
