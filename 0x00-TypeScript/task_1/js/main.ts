@@ -55,7 +55,7 @@ interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
-export class StudentClass implements stclass {
+export class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
 
