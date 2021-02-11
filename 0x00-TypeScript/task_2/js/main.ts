@@ -40,11 +40,11 @@ export const createEmployee = function(salary: number | string): Director | Teac
   }
 }
 
-export const isDirector = function(employee) {
+export function isDirector(employee) {
   return (employee instanceof Director);
 }
 
-export const  executeWork = function(employee) {
+export function executeWork(employee) {
   if (isDirector(employee)) {
     employee.workDirectorTasks();
   } else {
