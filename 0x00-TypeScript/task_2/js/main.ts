@@ -44,10 +44,10 @@ export function isDirector(employee) {
   return (employee instanceof Director);
 }
 
-export function executeWork(employee: DirectorInterface | TeacherInterface) {
+export function executeWork(employee: DirectorInterface | TeacherInterface): string {
   if (isDirector(employee)) {
-    employee.workDirectorTasks();
+    return (employee.workDirectorTasks());
   } else {
-    employee.workTeacherTasks();
+    return(employee.workTeacherTasks());
   }
 }
