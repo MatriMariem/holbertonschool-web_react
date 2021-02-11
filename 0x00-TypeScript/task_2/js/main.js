@@ -38,3 +38,16 @@ exports.createEmployee = function (salary) {
         return new Director();
     }
 };
+function isDirector(employee) {
+    return (employee instanceof Director);
+}
+exports.isDirector = isDirector;
+function executeWork(employee) {
+    if (employee instanceof Director) {
+        return (employee.workDirectorTasks());
+    }
+    else if (employee instanceof Teacher) {
+        return (employee.workTeacherTasks());
+    }
+}
+exports.executeWork = executeWork;

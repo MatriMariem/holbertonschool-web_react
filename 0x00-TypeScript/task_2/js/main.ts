@@ -45,9 +45,9 @@ export function isDirector(employee: DirectorInterface | TeacherInterface): bool
 }
 
 export function executeWork(employee: DirectorInterface | TeacherInterface): string {
-  if (isDirector(employee)) {
+  if (employee instanceof Director) {
     return (employee.workDirectorTasks());
-  } else {
+  } else if (employee instanceof Teacher){
     return(employee.workTeacherTasks());
   }
 }
