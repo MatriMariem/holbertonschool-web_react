@@ -70,3 +70,4 @@ const StudentClass: StudentConstructor = class StudentClass implements StudentCl
     return this.firstName;
   }
 }
+export StudentClass;
