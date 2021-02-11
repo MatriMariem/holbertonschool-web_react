@@ -1,15 +1,36 @@
-export interface MajorCredits {
-  credits: number,
-  brand: "MajorCredits"
-}
-export interface MinorCredits {
-  credits: number,
-  brand: "MinorCredits"
+
+interface MajorCredits {
+ credit: number;
+ _brand: "Major";
 }
 
-export function sumMajorCredits(subject1: MajorCredits, subject2: MajorCredits): number {
-  return (subject1.credits + subject2.credits);
+interface MinorCredits {
+ credit: number;
+ _brand: "Minor";
 }
-export function sumMinorCredits(subject1: MinorCredits, subject2: MinorCredits): number {
-  return (subject1.credits + subject2.credits);
+
+function sumMajorCredits(
+ subject1: MajorCredits,
+ subject2: MajorCredits
+): MajorCredits {
+ const sum = subject1.credit + subject2.credit;
+ const obj: MajorCredits = {
+   credit: sum,
+   _brand: "Major",
+ };
+
+ return obj;
+}
+
+function sumMinorCredits(
+ subject1: MinorCredits,
+ subject2: MinorCredits
+): MinorCredits {
+ const sum = subject1.credit + subject2.credit;
+ const obj: MinorCredits = {
+   credit: sum,
+   _brand: "Minor",
+ };
+
+ return obj;
 }
