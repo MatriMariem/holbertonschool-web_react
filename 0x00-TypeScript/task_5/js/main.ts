@@ -1,11 +1,10 @@
-interface MajorCredits {
-  credit: number;
-  _brand: "Major";
+export interface MajorCredits {
+  credit: number,
+  brand: "MajorCredits"
 }
-
-interface MinorCredits {
-  credit: number;
-  _brand: "Minor";
+export interface MinorCredits {
+  credit: number,
+  brand: "MinorCredits"
 }
 
 export function sumMajorCredits(subject1: MajorCredits, subject2: MajorCredits): number {
