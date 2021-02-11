@@ -51,3 +51,12 @@ function executeWork(employee) {
     }
 }
 exports.executeWork = executeWork;
+function teachClass(todayClass) {
+    if (todayClass === 'Math') {
+        return "Teaching Math";
+    }
+    else if (todayClass === 'History') {
+        return "Teaching History";
+    }
+}
+exports.teachClass = teachClass;
