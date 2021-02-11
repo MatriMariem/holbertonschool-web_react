@@ -55,7 +55,7 @@ interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
-const StudentClass: StudentConstructor = class StudentClass implements StudentClassInterface {
+export const StudentClass: StudentConstructor = class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
 
@@ -70,4 +70,3 @@ const StudentClass: StudentConstructor = class StudentClass implements StudentCl
     return this.firstName;
   }
 }
-export StudentClass;
