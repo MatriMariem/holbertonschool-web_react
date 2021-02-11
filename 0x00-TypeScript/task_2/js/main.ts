@@ -44,7 +44,7 @@ export function isDirector(employee) {
   return (employee instanceof Director);
 }
 
-export function executeWork(employee) {
+export function executeWork(employee: DirectorInterface | TeacherInterface) {
   if (isDirector(employee)) {
     employee.workDirectorTasks();
   } else {
