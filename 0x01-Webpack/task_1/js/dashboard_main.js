@@ -10,9 +10,9 @@ let count = 0;
 
 function updateCounter() {
 	count += 1;
+  $("#count").text(`${count} clicks on the button`);
 	return count;
 }
 $('button').on('click', _.debounce(() => {
 		let count = updateCounter();
-    $("#count").text(`${count} clicks on the button`);
 	}));

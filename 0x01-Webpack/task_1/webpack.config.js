@@ -8,4 +8,4 @@ module.exports = {
     publicPath: '/public'
   },
   mode: 'production',
-}
+};
