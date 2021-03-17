@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import App from './App';
 
+// to run all tests, please type "npm run test a" in the command line
 const wrapper = shallow(<App/>);
 
 describe('my app component', () => {

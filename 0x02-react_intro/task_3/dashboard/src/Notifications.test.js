@@ -3,6 +3,8 @@ import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import Notifications from './Notifications';
 
+// to run all tests, please type "npm run test a" in the command line
+
 const wrapper = shallow(<Notifications/>);
 
 describe('my Notifications component', () => {
@@ -16,9 +18,6 @@ describe('my Notifications component', () => {
   });
 
   const p = wrapper.find('p');
-  it('renders a paragraph', () => {
-    expect(p).to.have.length(1);
-  });
 
   it('renders a paragraph with a certain content', () => {
     expect(p.text()).to.equal('Here is the list of notifications');
