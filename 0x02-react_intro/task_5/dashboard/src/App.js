@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import logo from './logoholb.jpg';
 import './App.css';
 import { getFullYear, getFooterCopy } from './utils.js'

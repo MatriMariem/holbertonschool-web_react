@@ -4,12 +4,21 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist'
+    filename: 'bundle.js'
   },
-  mode: 'production',
+  mode: 'development',
+  devtool: 'inline-source-map',
+  devServer: {
+    hot: true,
+    contentBase: path.resolve(__dirname, 'dist')
+  },
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
       {
         test: /\.css$/,
         use: [
@@ -18,9 +27,9 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|png|gif|svg)$/,
-        loader: 'image-webpack-loader',
-        enforce: 'pre'
+        test: /\.(jpg|jpeg|png|gif|svg)$/,
+        type: 'asset/resource',
+        loader: 'image-webpack-loader'
       }
     ]
   }
