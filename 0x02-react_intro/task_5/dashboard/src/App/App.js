@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logoholb.jpg';
+import logo from '../assets/logoholb.jpg';
 import './App.css';
-import { getFullYear, getFooterCopy } from './utils.js'
+import { getFullYear, getFooterCopy } from '../utils/utils.js'
 
 function App() {
   return (
