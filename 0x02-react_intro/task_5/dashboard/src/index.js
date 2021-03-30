@@ -5,18 +5,17 @@ import Notifications from './Notifications/Notifications.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    // <App />
-    <p>haw ligra3</p>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Notifications />
-//   </React.StrictMode>,
-//   document.getElementById('root-notifications')
-// );
+ReactDOM.render(
+  <React.StrictMode>
+    <Notifications />
+  </React.StrictMode>,
+  document.getElementById('root-notifications')
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
