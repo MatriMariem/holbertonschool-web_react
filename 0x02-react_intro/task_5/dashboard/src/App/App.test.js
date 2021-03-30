@@ -1,8 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import { expect } from 'chai';
-import App from './App';
+import App from './App.js';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
+Enzyme.configure({ adapter: new Adapter() });
 // to run all tests, please type "npm run test a" in the command line
 const wrapper = shallow(<App/>);
 
