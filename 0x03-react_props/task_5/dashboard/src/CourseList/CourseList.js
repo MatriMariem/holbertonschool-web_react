@@ -8,16 +8,12 @@ import './CourseList.css'
 export default class CourseList extends React.Component {
   render() {
     if (this.props.listCourses.length == 0) {
-      console.log("first if")
       this.Courses = <CourseListRow textFirstCell="No course available yet"/>
     } else {
-      console.log("second if")
       this.Courses = this.props.listCourses.map((c, index) => (
           <CourseListRow key={c.id} textFirstCell={c.name} textSecondCell={c.credit}/>
         ))
   }
-  console.log("listCourses", this.props.listCourses)
-  console.log("COUUUUUUUUUUUURSESSSS", this.Courses)
 
     return (
       <table id="CourseList">
