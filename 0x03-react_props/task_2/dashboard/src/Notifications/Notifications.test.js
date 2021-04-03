@@ -20,7 +20,7 @@ describe('my Notifications component', () => {
   });
 
   it('renders NotificationItem', () => {
-    expect(NotificationItems.first().html()).to.equal('<li>New course available</li>');
+    expect(NotificationItems.first().html()).to.equal('<li data-notification-type=\"default\">New course available</li>');
   });
 
   const p = wrapper.find('p');
